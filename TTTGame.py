@@ -7,12 +7,32 @@ while True:
 	#Player "X" (user)
 
 	print(printBoard(T))
-	Xmove = input("X move?")
+
+	#ensure user input is valid
+	
+	while True:
+		
+		Xmove = input("Player X, where would you like to play?\n")
+
+		#if not (int(Xmove) >= 0) and (int(Xmove) <= 8):
+			#print("Invalid entry: The number you entered in out of range.")
+			#print("Please enter a valid number from 0 to 8:")
+
+		if (int(Xmove) >= 0) and (int(Xmove) <= 8):
+			if T[int(Xmove)] == 0:
+				break
+
+			else:
+				print("Invalid entry: The slot is already taken.")
+				print("Please enter a new number:")
+
+		else:
+			print("Invalid entry: The number you entered in out of range.")
+			print("Please enter a valid number from 0 to 8:")
 
 	#place X in the indicated slot
 
-	if T[int(Xmove)] == 0:
-		T[int(Xmove)] = 1
+	T[int(Xmove)] = 1
 
 	#analyze the game state after X move
 
@@ -32,6 +52,7 @@ while True:
 	#Player "O" (computer)
 
 	print(printBoard(T))
+	print("Player O:")
 
 	#place O in the best spot as analyzed by the simulation functions
 
