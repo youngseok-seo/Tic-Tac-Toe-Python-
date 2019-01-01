@@ -14,10 +14,6 @@ while True:
 		
 		Xmove = input("Player X, where would you like to play?\n")
 
-		#if not (int(Xmove) >= 0) and (int(Xmove) <= 8):
-			#print("Invalid entry: The number you entered in out of range.")
-			#print("Please enter a valid number from 0 to 8:")
-
 		if (int(Xmove) >= 0) and (int(Xmove) <= 8):
 			if T[int(Xmove)] == 0:
 				break
