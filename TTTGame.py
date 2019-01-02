@@ -1,3 +1,4 @@
+
 from TTTLib import *
 
 T = genBoard()
@@ -8,7 +9,7 @@ while True:
 
 	print(printBoard(T))
 
-	#ensure user input is valid
+	#take in user input, check if the indicated slot is valid
 	
 	while True:
 		
@@ -23,7 +24,7 @@ while True:
 				print("Please enter a new number:")
 
 		else:
-			print("Invalid entry: The number you entered in out of range.")
+			print("Invalid entry: The number you entered is out of range.")
 			print("Please enter a valid number from 0 to 8:")
 
 	#place X in the indicated slot
