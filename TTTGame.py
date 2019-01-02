@@ -65,7 +65,7 @@ while True:
 			T[int(nonlosemove)] = 2
 			break
 	
-		randmove = genRandomMove(T,2)
+		randmove = genRandomMove(T)
 		if T[int(randmove)] == 0:
 			T[int(randmove)] = 2
 			break
