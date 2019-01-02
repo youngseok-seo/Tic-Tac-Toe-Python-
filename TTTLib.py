@@ -121,7 +121,7 @@ def genNonLosingMove(T,player):
 
    return genWinningMove(T,opponent(player))
 
-def genOpenMove(T,player):
+def genOpenMove(T):
 
    #generate the first open slot
    #return -1 for ERROR
@@ -132,7 +132,7 @@ def genOpenMove(T,player):
 
    return -1
 
-def genRandomMove(T,player):
+def genRandomMove(T):
 
    #check if there is an empty slot
    #return -1 for ERROR
@@ -153,5 +153,5 @@ def genRandomMove(T,player):
    if T[randmove] == 0:
       return randmove
    else:
-      return genRandomMove(T,player)
+      return genRandomMove(T)
 
